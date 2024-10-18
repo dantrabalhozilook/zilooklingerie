@@ -1,0 +1,697 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8eefc;
+}
+
+/* Estilos da barra superior */
+.top-bar,
+.top-bar2,
+.top-bar3 {
+    width: 100%;
+    position: relative;
+    z-index: 999;
+}
+
+
+.top-bar {
+    background-color:#f8eefc;
+    height: 25px; /* Altura da barra */
+    position: relative; /* Necessário para o posicionamento do texto */
+}
+
+.download-app-text {
+    color: gray; /* Cor cinza para o texto */
+    font-size: 12px; /* Tamanho da fonte */
+    position: absolute; /* Posicionamento absoluto dentro da barra */
+    right: 10px; /* Alinha o texto à direita */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta o alinhamento vertical */
+    display: flex; /* Flexbox para alinhar o ícone e o texto na mesma linha */
+    align-items: center; /* Garante que ambos estejam centralizados verticalmente */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.app-icon {
+    width: 14px; /* Tamanho da imagem do ícone */
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+/* Adicionando um efeito de hover para o link */
+.download-app-text:hover {
+    color: darkgray; /* Muda a cor do texto ao passar o mouse */
+}
+.top-bar2 {
+    background-color:#f8eefc;
+    height: 40px;
+}
+
+.top-bar3 {
+    background-color: #B08B9D;
+    height: 40px;
+    display: flex; /* Flexbox para alinhar os elementos */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Espaça os elementos entre o início e o final */
+    padding: 0 20px; /* Espaço nas laterais */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra */
+    z-index: 10; /* Garante que a barra fique acima do banner */
+}
+
+.top-bar3-text {
+    color: white; /* Cor branca para o texto */
+    font-size: 17px; /* Tamanho da fonte (ajustável) */
+}
+
+.top-bar3-text-right {
+    color: white; /* Cor branca para o texto */
+    font-size: 17px;
+    text-align: right; /* Alinha o texto à direita */
+    flex-grow: 1; /* Ocupa o espaço à direita */
+    padding-left: 50px; /* Espaço para centralizar o segundo texto a partir do meio */
+}
+
+.top-bar3-text strong, .top-bar3-text-right strong {
+    font-weight: bold; /* Negrito nas palavras dentro de <strong> */
+}
+
+/* Estilos do header */
+header {
+    background-color: #B08B9D;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    height: 80px;
+    width: 100%;
+    top: 0; /* Alinhamento ao topo */
+    z-index: 1000; /* Certifique-se de que esteja acima de outros elementos */
+    gap: 20px;
+    position: sticky; /* Faz o header "colar" ao rolar */
+    top: 0; /* Posição no topo ao rolar */
+}
+
+.logo img {
+    height: 60px;
+    margin: 0 50px;
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 600px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+}
+
+.cart-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.heart-icon {
+    height: 40px;
+    cursor: pointer;
+}
+
+.favorites-text {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.entrar-icon {
+    height: 26px;
+    cursor: pointer;
+}
+
+.conta-text {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Estilos para o ícone do carrinho no topo */
+.cart-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    position: relative;
+}
+
+.cart-img {
+    height: 40px;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* Estilos para os botões de "Adicionar ao Carrinho" */
+.add-to-cart-btn {
+    background-color: #B08B9D;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #c0392b;
+}
+
+
+/* Alinhamento e espaçamento no produto */
+.product {
+    position: relative;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.product-price {
+    font-size: 16px;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover .product-image {
+    transform: scale(1.05);
+}
+
+/* Responsividade para os produtos */
+@media (max-width: 1200px) {
+    .product-item {
+        flex: 1 1 calc(25% - 20px); /* Em telas menores, mostrar 4 produtos por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 1 calc(33.33% - 20px); /* Em tablets, mostrar 3 produtos por linha */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        flex: 1 1 calc(50% - 20px); /* Em smartphones, mostrar 2 produtos por linha */
+    }
+}
+
+/* Estilos do banner */
+.banner {
+    position: relative;
+    width: calc(100%);
+    height: 350px;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+.banner-images {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.banner-images img {
+    min-width: 1351px;
+    height: 347px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para as categorias */
+.categories {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.category-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.category-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.category-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 25px 0;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.category-image:hover {
+    transform: scale(1.05);
+}
+
+.category-name {
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+}/* Seção de destaque */
+.featured-section {
+    width: 90%; /* Ocupa quase toda a largura da página */
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featured-title {
+    margin-bottom: 20px;
+}
+
+.featured-title h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.featured-products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    flex-basis: calc(16.66% - 20px); /* Faz 6 produtos ocuparem a linha inteira */
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Efeito de destaque ao passar o mouse */
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-size: 16px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+
+/* Altera a imagem ao passar o mouse por cima do produto */
+.product-item.hover-img img {
+    transition: opacity 0.3s;
+}
+
+.product-item.hover-img:hover img {
+    content: url('images/costas/prod1-houver.jpg') /* Troca para a imagem de hover */
+}
+
+/* Altera a imagem ao passar o mouse por cima do produto */
+.product-item.hover-img2 img {
+    transition: opacity 0.3s;
+}
+
+.product-item.hover-img2:hover img {
+    content: url('images/costas/prod2-costas.jpg'); /* Troca para a imagem de hover */
+}
+
+/* Altera a imagem ao passar o mouse por cima do produto */
+.product-item.hover-img3 img {
+    transition: opacity 0.3s;
+}
+
+.product-item.hover-img3:hover img {
+    content: url('images/costas/prod3_costas.jpg'); /* Troca para a imagem de hover */
+}
+
+/* Altera a imagem ao passar o mouse por cima do produto */
+.product-item.hover-img4 img {
+    transition: opacity 0.3s;
+}
+
+.product-item.hover-img4:hover img {
+    content: url('images/costas/prod4_costas.jpg'); /* Troca para a imagem de hover */
+}
+
+/* Altera a imagem ao passar o mouse por cima do produto */
+.product-item.hover-img5 img {
+    transition: opacity 0.3s;
+}
+
+.product-item.hover-img5:hover img {
+    content: url('images/costas/prod5_costas.jpg'); /* Troca para a imagem de hover */
+}
+
+/* Altera a imagem ao passar o mouse por cima do produto */
+.product-item.hover-img7 img {
+    transition: opacity 0.3s;
+}
+
+.product-item.hover-img7:hover img {
+    content: url('images/costas/prod7_costas.jpg'); /* Troca para a imagem de hover */
+}
+
+/* Altera a imagem ao passar o mouse por cima do produto */
+.product-item.hover-img8 img {
+    transition: opacity 0.3s;
+}
+
+.product-item.hover-img8:hover img {
+    content: url('images/costas/prod8_costas.jpg'); /* Troca para a imagem de hover */
+}
+
+/* Altera a imagem ao passar o mouse por cima do produto */
+.product-item.hover-img9 img {
+    transition: opacity 0.3s;
+}
+
+.product-item.hover-img9:hover img {
+    content: url('images/costas/prod9_costas.jpg'); /* Troca para a imagem de hover */
+}
+
+/* Altera a imagem ao passar o mouse por cima do produto */
+.product-item.hover-img10 img {
+    transition: opacity 0.3s;
+}
+
+.product-item.hover-img10:hover img {
+    content: url('images/costas/prod10_costas.jpg'); /* Troca para a imagem de hover */
+}
+
+
+/* Estilizando a seção de todos os produtos */
+.all-products {
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.all-products h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-item {
+    flex: 1 1 calc(20% - 20px); /* Ocupa 1/5 da largura da linha */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-name {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-price {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 1200px) {
+    .product-item {
+        flex: 1 1 calc(25% - 20px); /* Em telas menores, mostrar 4 produtos por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 1 calc(33.33% - 20px); /* Em tablets, mostrar 3 produtos por linha */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        flex: 1 1 calc(50% - 20px); /* Em smartphones, mostrar 2 produtos por linha */
+    }
+}
+
+/* Estilos do rodapé */
+.footer {
+    background-color: #B08B9D;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.footer-section ul li:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+.qrcode {
+    width: 100px;
+    margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section {
+        margin: 10px 0;
+    }
+}
+
+/* Estilos para o ícone flutuante do WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Fica acima de outros elementos da página */
+}
+
+.whatsapp-icon img {
+    width: 60px; /* Tamanho do ícone */
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999; /* Eleva o modal acima dos outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro translúcido */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #f8eefc;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao redor do modal */
+}
+
+.close {
+    color: #B08B9D;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #c0392b;
+}
+
+.size-quantity {
+    margin: 15px 0;
+    text-align: left;
+    font-size: 14px;
+}
+
+.size-quantity label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #b18b9e;
+}
+
+.size-quantity input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#totalQuantity {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #e74c3c;
+}
+
+#submitBtn {
+    background-color: #b18b9e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#submitBtn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#submitBtn:hover:not(:disabled) {
+    background-color: #c0392b;
+}

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra Sua Beleza Interior - Zilook Lingerie</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        var titleText = " - Descubra Sua Beleza Interior - Zilook Lingerie";
+        var speed = 100;
+        var index = 0;
+
+        function scrollTitle() {
+            document.title = titleText.substring(index, titleText.length) + titleText.substring(0, index);
+            index++;
+            if (index > titleText.length) {
+                index = 0;
+            }
+            setTimeout(scrollTitle, speed);
+        }
+        scrollTitle();
+    </script>
+</head>
+
+
+<audio id="add-to-cart-sound" src="images/popup.mp3" preload="auto"></audio>
+
+<body>
+    <div class="top-bar">
+        <a href="#" class="download-app-text">
+            <img src="images/celular.png" alt="Ícone de celular" class="app-icon">
+            <strong>Baixe nosso app</strong>
+        </a>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo da Marca">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="O que você tá procurando?">
+        </div>
+        <div class="cart-icon">
+            <img src="images/coracao.png" alt="Favoritos" class="heart-icon">
+            <span class="conta-text">Favoritos</span>
+            <img src="images/usuario.png" alt="Entrar" class="entrar-icon">
+            <span class="favorites-text">Entrar</span>
+            <img src="images/car.png" alt="Carrinho de Compras" class="cart-img">
+            <span class="cart-count">0</span> <!-- Contador de itens no carrinho -->
+        </div>
+
+
+    </header>
+
+    <div class="top-bar2"></div>
+    <div class="top-bar3">
+        <span class="top-bar3-text">Trabalhamos com <strong>pedido mínimo</strong> de <strong>900</strong> conjuntos.</span>
+        <span class="top-bar3-text-right">Enviamos através de <strong>excursões</strong>, <strong>transportadora</strong> e <strong>aéreo</strong>.</span>
+    </div>
+
+    <section class="banner">
+        <div class="banner-images">
+            <img src="images/banners/banner1.png" class="active" alt="Banner 1">
+            <img src="images/banners/banner2.png" alt="Banner 2">
+            <img src="images/banners/banner3.png" alt="Banner 3">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </section>
+
+    
+    <main>
+        <section class="categories">
+            <div class="category-row">
+                <div class="category-column">
+                    <img src="images/categorias/sutia.png" alt="Categoria 1" class="category-image"> 
+                    <p class="category-name">Sutiãs</p>
+                </div>
+                <div class="category-column">
+                    <img src="images/categorias/calcinha.png" alt="Categoria 2" class="category-image"> 
+                    <p class="category-name">Calcinhas</p>
+                </div>
+                <div class="category-column">
+                    <img src="images/categorias/cueca.png" alt="Categoria 3" class="category-image">
+                    <p class="category-name">Cuecas</p>
+                </div>
+                <div class="category-column">
+                    <img src="images/categorias/babydoll.png" alt="Categoria 4" class="category-image">
+                    <p class="category-name">Babydolls</p>
+                </div>
+                <div class="category-column">
+                    <img src="images/categorias/conjunto.png" alt="Categoria 5" class="category-image">
+                    <p class="category-name">Conjuntos</p>
+                </div>
+                <div class="category-column">
+                    <img src="images/categorias/conjuntoplus.png" alt="Categoria 6" class="category-image">
+                    <p class="category-name">Conjuntos Plus</p>
+                </div>
+                <div class="category-column">
+                    <img src="images/categorias/biquini.png" alt="Categoria 7" class="category-image">
+                    <p class="category-name">Praia</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção de Destaque -->
+        <section class="featured-section">
+            <div class="featured-title">
+                <h2>Destaque</h2>
+            </div>
+            <div class="featured-products">
+                <div class="product">
+                    <img src="images/prod1.jpg" alt="Produto 1" class="product-image">
+                    <p class="product-name">Conjunto</p>
+                    <p class="product-price">R$ 15,00</p>
+                    <button class="add-to-cart-btn conjunto" data-name="Conjunto" data-price="15.00" data-image="images/prod1.jpg">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="images/prod2.jpg" alt="Produto 2" class="product-image">
+                    <p class="product-name">Conjunto</p>
+                    <p class="product-price">R$ 15,00</p>
+                    <button class="add-to-cart-btn conjunto" data-name="Conjunto" data-price="15.00" data-image="images/prod2.jpg">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+                <div class="product">
+                    <img src="images/prod3.jpg" alt="Produto 3" class="product-image">
+                    <p class="product-name">Sutiã</p>
+                    <p class="product-price">R$ 9,00</p>
+                    <button class="add-to-cart-btn" data-name="Sutiã" data-price="9.00" data-image="images/prod3.jpg">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+                <!-- Produto 4 -->
+                <div class="product">
+                    <img src="images/prod4.jpeg" alt="Produto 4" class="product-image">
+                    <p class="product-name">Robe</p>
+                    <p class="product-price">R$ 24,00</p>
+                    <button class="add-to-cart-btn" data-name="conjunto2" data-price="9.00" data-image="images/prod4.jpg">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+                <!-- Produto 5 -->
+                <div class="product">
+                    <img src="images/prod5.jpg" alt="Produto 5" class="product-image">
+                    <p class="product-name">Cueca</p>
+                    <p class="product-price">R$ 9,00</p>
+                    <button class="add-to-cart-btn" data-name="cueca2" data-price="9.00" data-image="images/prod5.jpg">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+                <!-- Produto 6 -->
+                <div class="product">
+                    <img src="images/prod6.jpeg" alt="Produto 6" class="product-image">
+                    <p class="product-name">Conjunto plus</p>
+                    <p class="product-price">R$ 15,00</p>
+                     <button class="add-to-cart-btn plus" data-name="conjunto3" data-price="9.00" data-image="images/prod6.jpg">
+                                        Adicionar ao Carrinho
+                                    </button>
+                                </div>
+            </div>
+        </section>
+
+<!-- Modal para seleção de tamanho e quantidade -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Escolha o Tamanho e Quantidade (Mínimo: 100 unidades)</h2>
+        <form id="cartForm">
+            <div id="size-options-conjunto" style="display: none;"> <!-- Este ID é importante -->
+                <div class="size-quantity">
+                    <label for="size-p">Quantidade P:</label>
+                    <input type="number" id="size-p" value="0" min="0">
+                </div>
+                <div class="size-quantity">
+                    <label for="size-m">Quantidade M:</label>
+                    <input type="number" id="size-m" value="0" min="0">
+                </div>
+                <div class="size-quantity">
+                    <label for="size-g">Quantidade G:</label>
+                    <input type="number" id="size-g" value="0" min="0">
+                </div>
+            </div>
+            <div id="size-options-plus" style="display: none;"> <!-- Este ID é importante também -->
+                <div class="size-quantity">
+                    <label for="size-48">Quantidade 48:</label>
+                    <input type="number" id="size-48" value="0" min="0">
+                </div>
+                <div class="size-quantity">
+                    <label for="size-50">Quantidade 50:</label>
+                    <input type="number" id="size-50" value="0" min="0">
+                </div>
+                <div class="size-quantity">
+                    <label for="size-52">Quantidade 52:</label>
+                    <input type="number" id="size-52" value="0" min="0">
+                </div>
+            </div>
+            <div>
+                <p id="totalQuantity">Total: 0</p>
+            </div>
+            <button type="submit" disabled id="submitBtn">Adicionar ao Carrinho</button>
+        </form>
+    </div>
+</div>
+
+
+        <section class="all-products">
+            <h2>Todos os Produtos</h2>
+            <div class="product-grid">
+                <div class="product-item hover-img">
+                    <img src="images/prod1.jpg" alt="Produto 1">
+                    <p class="product-name">Conjunto</p>
+                    <p class="product-price">R$ 15,00</p>
+                    <button class="add-to-cart-btn conjunto" data-name="Conjunto" data-price="15.00" data-image="images/prod1.jpg">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+                <div class="product-item hover-img2">
+                    <img src="images/prod2.jpg" alt="Produto 2">
+                    <p class="product-name">Conjunto</p>
+                    <p class="product-price">R$ 15,00</p>
+                    <button class="add-to-cart-btn conjunto" data-name="Conjunto" data-price="15.00" data-image="images/prod2.jpg">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+                <div class="product-item hover-img3">
+                    <img src="images/prod3.jpg" alt="Produto 3">
+                    <p class="product-name">Sutiã</p>
+                    <p class="product-price">R$ 9,00</p>
+                    <button class="add-to-cart-btn" data-name="Sutiã" data-price="9.00" data-image="images/prod3.jpg">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+             <!-- Produto 4 -->
+                                <div class="product-item hover-img4">
+                                <img src="images/prod4.jpeg" alt="Produto 4">
+                                    <p class="product-name">Robe</p>
+                                    <p class="product-price">R$ 24,00</p>
+                                    <button class="add-to-cart-btn" data-name="conjunto2" data-price="9.00" data-image="images/prod4.jpg">
+                                        Adicionar ao Carrinho
+                                    </button>
+                                </div>
+                                <!-- Produto 5 -->
+                                <div class="product-item hover-img5">
+                                    <img src="images/prod5.jpg" alt="Produto 5">
+                                    <p class="product-name">Cueca</p>
+                                    <p class="product-price">R$ 9,00</p>
+                                    <button class="add-to-cart-btn" data-name="cueca2" data-price="9.00" data-image="images/prod5.jpg">
+                                        Adicionar ao Carrinho
+                                    </button>
+                                </div>
+                                <!-- Produto 6 -->
+                                <div class="product-item">
+                                    <img src="images/prod6.jpeg" alt="Produto 6">
+                                    <p class="product-name">Conjunto plus</p>
+                                    <p class="product-price">R$ 15,00</p>
+                                    <button class="add-to-cart-btn plus" data-name="conjunto3" data-price="9.00" data-image="images/prod6.jpg">
+                                        Adicionar ao Carrinho
+                                    </button>
+                                </div>
+                                  <!-- Produto 7 -->
+                                  <div class="product-item hover-img7">
+                                    <img src="images/prod7.jpg" alt="Produto 6">
+                                    <p class="product-name">Sutiã</p>
+                                    <p class="product-price">R$ 9,00</p>
+                                    <button class="add-to-cart-btn" data-name="sutiã2" data-price="9.00" data-image="images/prod7.jpg">
+                                        Adicionar ao Carrinho
+                                    </button>
+                                </div>
+                                  <!-- Produto 8 -->
+                                  <div class="product-item hover-img8">
+                                    <img src="images/prod8.jpg" alt="Produto 6">
+                                    <p class="product-name">Cueca</p>
+                                    <p class="product-price">R$ 9,00</p>
+                                    <button class="add-to-cart-btn" data-name="cueca4" data-price="9.00" data-image="images/prod8.jpg">
+                                        Adicionar ao Carrinho
+                                    </button>
+                                </div>
+                                  <!-- Produto 9 -->
+                                  <div class="product-item hover-img9">
+                                    <img src="images/prod9.jpg" alt="Produto 6">
+                                    <p class="product-name">Calcinha</p>
+                                    <p class="product-price">R$ 9,00</p>
+                                    <button class="add-to-cart-btn" data-name="calcinha1" data-price="9.00" data-image="images/prod9.jpg">
+                                        Adicionar ao Carrinho
+                                    </button>
+                                </div>
+                                  <!-- Produto 10 -->
+                                  <div class="product-item hover-img10">
+                                    <img src="images/prod10.jpg" alt="Produto 6">
+                                    <p class="product-name">Calcinha</p>
+                                    <p class="product-price">R$9,00</p>
+                                    <button class="add-to-cart-btn" data-name="calcinha2" data-price="9.00" data-image="images/prod10.jpg">
+                                        Adicionar ao Carrinho
+                                    </button>
+                                </div>
+            </div>
+         </section>
+
+        <footer class="footer">
+            <div class="footer-section">
+                <h3>ATENDIMENTO AO CLIENTE</h3>
+                <ul>
+                    <li>Localização</li>
+                    <li>Como Comprar</li>
+                    <li>Métodos de Pagamento</li>
+                    <li>Garantia</li>
+                    <li>Devolução e Reembolso</li>
+                    <li>Fale Conosco</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>SOBRE A ZILOOK</h3>
+                <ul>
+                    <li>Sobre Nós</li>
+                    <li>Política Zilook</li>
+                    <li>Política de Privacidade</li>
+                    <li>Trabalhe conosco</li>
+                    <li>Blog Zilook</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>PAGAMENTO</h3>
+                <ul>
+                    <li>Pix</li>
+                    <li>Transferência bancária</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>SIGA-NOS</h3>
+                <ul>
+                    <li>Instagram</li>
+                    <li>TikTok</li>
+                    <li>Facebook</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>BAIXE NOSSO APP</h3>
+                <img src="images/qrcode.jpg" alt="QR Code para baixar o app" class="qrcode">
+            </div>
+        </footer>
+        
+    </main>
+
+    <script src="scripts.js"></script>
+
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/5585981120101" target="_blank">
+            <img src="images/whatsapp-logo.png" alt="WhatsApp Logo">
+        </a>
+    </div>
+
+</body>
+</html>
